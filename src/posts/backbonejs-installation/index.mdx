@@ -1,0 +1,43 @@
+---
+title: 'Installing BackboneJS'
+date: '2013-10-07'
+slug: '/digging-into-backbonejs/install'
+tags: ['BackboneJS', 'Frameworks', 'JavaScript', 'JS', 'Libraries']
+---
+
+import { Link } from 'gatsby';
+
+Getting started and installing is easy. First, go to the Backbone.js website and download the development or production file of the latest stable version. Then download the dependancies.
+
+Dependancies
+
+BackboneJS’s only dependancies are jQuery and UnderscoreJS. Underscore provides many helper methods and can be interchanged with Lo-Dash (more about this in future articles).
+
+Installation
+
+To set up your environment, all that you need to do is include those three files.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <script src="js/underscore.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/backbone.js"></script>
+  </body>
+</html>
+```
+
+That’s it! Now you can start developing your Single Page Apps. Next, we’ll dive into Backbone Models.
+
+### Digging into Backbone.js series:
+
+- <Link to="/blog/digging-into-backbonejs/what-is-backbonejs">What is Backbone.js?</Link>
+- Installing Backbone.js
+- <Link to="/blog/digging-into-backbonejs/models">Models</Link>
+- <Link to="/blog/digging-into-backbonejs/collections">Collections</Link>
+- <Link to="/blog/digging-into-backbonejs/views">Views</Link>
+- <Link to="/blog/digging-into-backbonejs/routers">Routers</Link>

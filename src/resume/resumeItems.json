@@ -1,0 +1,194 @@
+{
+  "headline": "JavaScript, HTML, CSS, etc.",
+  "location": "Midlothian, Texas",
+  "description": "Results-driven professional specializing in front-end web architecture, development and design. Develops well-designed, accessible and standards-based web sites and apps. Highly effective communicator and team leader. Manages multiple projects or teams to successful deployment. Visionary developer with a keen understanding of business priorities and demonstrated expertise in rapidly advancing business goals to revenue-producing activities.",
+  "specialties": [
+    "Extensive knowledge of HTML and CSS, including HTML5 and CSS3",
+    "Experience with front-end frameworks including Bootstrap and Foundation",
+    "In-depth knowledge of JavaScript and TypeScript",
+    "Proficient in JS framework libraries including ReactJS, Angular, AngularJS, Redux and LoDash",
+    "Experience with Node.js",
+    "Thorough grasp of cross-platform, cross-browser compatibility issues and code optimization",
+    "In-depth knowledge of Adobe Creative Suite tools including: Photoshop, Illustrator, Acrobat Pro and InDesign",
+    "In-depth experience with build systems including Webpack, Gulp.js and Grunt.js.",
+    "Experience with package managers including NPM and bower.io",
+    "Extensive knowledge of CMS & WordPress Development",
+    "Experience with Agile Development Methodologies",
+    "Organized, highly motivated, and detail-directed problem solver",
+    "Goal-oriented individual with strong leadership capabilities",
+    "12+ years of management experience including 2 years of multi-unit management",
+    "Bilingual in spoken and written Spanish "
+  ],
+  "experience": [
+    {
+      "company": "Resi Media, LLC (formerly Living As One)",
+      "location": "Plano, Texas",
+      "logo": "",
+      "roles": [
+        {
+          "title": "Principal Engineer",
+          "dates": {
+            "start": "2021-01-01",
+            "end": ""
+          }
+        }
+      ]
+    },
+    {
+      "company": "Cisco Systems",
+      "location": "Richardson, Texas",
+      "logo": "",
+      "roles": [
+        {
+          "title": "Technical Leader, UI Architect",
+          "dates": {
+            "start": "2017-03-01",
+            "end": "2021-01-01"
+          },
+          "description": [
+            "UI Architect for the Cisco Webex design system(Momentum Design), including the Momentum UI libraries and the Momentum.Design website.",
+            "Led a team of front end developers to create and maintain the Momentum UI Libraries, which include over 60 reusable components, implemented in HTML/CSS, React, Angular and AngularJS.",
+            "Architected component modules and their interactions, defined capabilities at each level of the stack, reusability, scale and performance",
+            "Wrote code, prototyped reference architectures, built base / core modules for the platform frontend using cutting edge technology stacks",
+            "Researched trending and potential future technologies and brought them in to advance the platform",
+            "Solved some of our business’ most critical visual technical challenges, providing simple solutions to complex visual and usability challenges",
+            "Translated high level requirements to actionable tasks / deliverables",
+            "Worked along with UX, product management and senior leadership teams, while also mentoring and guiding the frontend / application engineering team"
+          ]
+        },
+        {
+          "title": "UI Engineering Manager",
+          "dates": {
+            "start": "2016-05-01",
+            "end": "2017-03-01"
+          },
+          "description": [
+            "Managed team of UI Engineers developing a B2B Administrative application",
+            "Managed features and initiatives to completion",
+            "Prepared definition of ready plans for new features"
+          ]
+        },
+        {
+          "title": "Lead UI Development Engineer",
+          "dates": {
+            "start": "2014-08-01",
+            "end": "2016-05-01"
+          },
+          "description": [
+            "Develop and manage custom front-end framework based on Foundation 5.",
+            "Write modular LESS and Sass based CSS.",
+            "Create custom Angular components/widgets.",
+            "Program and manage grunt and gulp build systems for large-scale Angular application.",
+            "Collaborate with UX/UE and Product team on design requirements and solutions.",
+            "Evaluate, develop and showcase the latest technologies.",
+            "Champion new ideas and the adoption of new technologies within the larger organization.",
+            "Understand the business, the customer's motivations, and the competition.",
+            "Mentor junior team members"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "AT&T",
+      "location": "Dallas, Texas",
+      "logo": "",
+      "roles": [
+        {
+          "title": "Lead User Interface Developer",
+          "dates": {
+            "start": "2013-09-01",
+            "end": "2014-08-01"
+          },
+          "description": [
+            "Developed the search engine and performance optimized front-end (HTML, CSS, and JS) for business and eCommerce Website",
+            "Developed front end web applications using Backbone.js, Handlebars.js, Require.js, Grunt.js, LESS, Sass, and other front end libraries and frameworks",
+            "Led team of 40+ front end developers on 24 Agile teams",
+            "Created and developed front end ui framework used by up to 24 teams on B2B program",
+            "Carried out W3C validation, code reviews, accessibility and usability audits and tests, debugging, and Website maintenance / support",
+            "Implemented rapid changes to meet changing business and marketing requirements",
+            "Constantly assessed, evaluated, and integrated best practices and industry innovations in web development",
+            "Analyzed and optimized pages and page design for maximum performance",
+            "Brainstormed with UI/UX team on design requirements and solutions",
+            "Developed functional and technical documentation on assigned projects"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "IMC2 (Latterly MPY Digital)",
+      "location": "Dallas, Texas",
+      "logo": "",
+      "roles": [
+        {
+          "title": "Lead User Interface Developer",
+          "dates": {
+            "start": "2012-03-01",
+            "end": "2013-09-01"
+          },
+          "description": [
+            "Responsible for design & development of web-based applications with rich user interfaces.",
+            "Gathered, interpreted and implemented technical requirements in a consistent and effective manner.",
+            "Developed, modified, wrote and implemented user interfaces for large scale websites and applications",
+            "Led team of four in development, testing, debugging, and maintenance of dynamic and secure websites and web-based applications, including widgets, templates, and microsites",
+            "Works with technical, design, business, and editorial staff to create applications and pages",
+            "Developed Facebook Apps",
+            "Developed WordPress Themes and Plugins",
+            "Researched current industry trends, and assisted with development and promotion of coding best practices within team and industry",
+            "Clients included: Houghton Mifflin Harcourt, NBC, World Vision Canada, Louisville Slugger and more"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Head Turning Media",
+      "location": "Midlothian, Texas",
+      "logo": "",
+      "roles": [
+        {
+          "title": "Owner",
+          "dates": {
+            "start": "2010-07-01",
+            "end": "2012-03-01"
+          },
+          "description": [
+            "Design and Develop SEO friendly Small Business and Non-profit websites and social media. Create websites that convert visitors into customers."
+          ]
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Southwestern Assembles of God University",
+      "major": "Business Management",
+      "dates": "1998 - 2001"
+    }
+  ],
+  "volunteer": [
+    {
+      "title": "Children's Worker",
+      "location": "FBC Midlothian",
+      "focus": "Children"
+    },
+    {
+      "title": "Team Coordinator",
+      "location": "American Heart Association",
+      "focus": "Health"
+    },
+    {
+      "title": "Team Captain for Annual Pledge Campaign",
+      "location": "United Way of Metropolitan Dallas",
+      "focus": "Social Services"
+    },
+    {
+      "title": "Classroom Volunteer",
+      "location": "Junior Achievement of Dallas, Inc.",
+      "focus": "Education"
+    },
+    {
+      "title": "Committee Member",
+      "location": "March of Dimes",
+      "focus": "Health"
+    }
+  ]
+}

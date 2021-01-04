@@ -1,0 +1,64 @@
+---
+title: 'What is a Collection?'
+date: '2013-10-21'
+slug: '/digging-into-backbonejs/collections'
+tags: ['BackboneJS', 'Frameworks', 'JavaScript', 'JS', 'Libraries']
+---
+
+import { Link } from 'gatsby';
+
+Collections are ordered sets of models. For example:
+
+- Model: Book - Collection: Library
+- Model: Song - Collection: Artist
+- Model: Todo item - Collection: Todo List
+
+```JavaScript
+var Book = Backbone.Model.extend({
+    initialize: function(){
+        console.log("Take a look, It's in a book, A Reading Rainbow!");
+    }
+});
+
+var Library = Backbone.Collection.extend({
+    model: Book
+});
+```
+
+## Building a Collection
+
+Now let's populate our collection with some useful model data.
+
+```JavaScript
+Book = Backbone.Model.extend({
+    defaults: {
+        title: 'Not specified',
+        author: 'Not specified'
+    },
+    initialize: function() {
+        console.log("Take a look, It's in a book, A Reading Rainbow!");
+    }
+});
+
+var Library = Backbone.Collection.extend({
+    model: Book
+});
+
+var book1 = new Book({ title: 'To Kill a Mockingbird', author: 'Harper Lee' });
+var book2 = new Book({ title: '1984', author: 'George Orwell' });
+var book3 = new Book({ title: 'The Lord of the Rings', author: 'J.R.R. Tolkien' });
+
+var myLibrary = new Library([ book1, book2, book3]);
+console.log( myLibrary.models ); // [book1, book2, book3]
+```
+
+Next, let's look at <Link to="/blog/digging-into-backbonejs/views">Views</Link>.
+
+### Digging into Backbone.js series:
+
+- <Link to="/blog/digging-into-backbonejs/what-is-backbonejs">What is Backbone.js?</Link>
+- <Link to="/blog/digging-into-backbonejs/install">Installing Backbone.js</Link>
+- <Link to="/blog/digging-into-backbonejs/models">Models</Link>
+- Collections
+- <Link to="/blog/digging-into-backbonejs/views">Views</Link>
+- <Link to="/blog/digging-into-backbonejs/routers">Routers</Link>

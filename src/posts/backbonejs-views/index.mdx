@@ -1,0 +1,163 @@
+---
+title: 'What is a View?'
+date: '2013-10-31'
+slug: '/digging-into-backbonejs/views'
+tags: ['BackboneJS', 'Frameworks', 'JavaScript', 'JS', 'Libraries']
+---
+
+import { Link } from 'gatsby';
+
+> Backbone views are almost more convention than they are code —they don't determine anything about your HTML or CSS for you, and can be used with any JavaScript templating library.
+
+Views are used to organize your UI into logical views. Your views are connected to <Link to="/blog/digging-into-backbonejs/models">models</Link>, and both can be updated independently when the model is changed, without the need to re-render the entire page. Instead of parsing a JSON object, looking up an element in the DOM, and updating the HTML by hand, you can instead bind your view's "render" function to the model's "change" event. Then, anywhere that model data is displayed in your app's UI, it will always be up to date.
+
+```JavaScript
+ListView = Backbone.View.extend({
+    initialize: function(){
+        alert("Reading is Fun!");
+    }
+});
+
+// The initialize function is always called when instantiating a Backbone View.
+// Consider it the constructor of the class.
+var list_view = new ListView();
+```
+
+## The "el" property
+
+The "el" property references the DOM object created in the browser. Every <a href="http://backbonejs.org/" target="_blank">Backbone.js</a> view has an "el" property, and if it not defined, Backbone.js will construct its own, which is an empty div element.
+
+Let's set our view's "el" property to div#list_container, effectively making Backbone.View the owner of the DOM element.
+
+FYI: This binds the container element, so any events you trigger must be in this element.
+
+```HTML
+<div id="list_container"></div>
+
+<script type="text/javascript">
+    ListView = Backbone.View.extend({
+        initialize: function(){
+            alert("Reading is Fun!");
+        }
+    });
+
+    // The initialize function is always called when instantiating a Backbone View.
+    // Consider it the constructor of the class.
+    var list_view = new ListView({ el: $("#list_container") });
+</script>
+```
+
+## Loading a template
+
+Backbone.js is dependent on <a href="http://documentcloud.github.com/underscore/" target="_blank">Underscore.js</a>, which includes its own micro-templating solution. I prefer to use <a href="http://handlebarsjs.com/" target="_blank">Handlebars.js</a> for templating with Backbone.js. We will look more at Handlebars.js in a future article. For this example, we will use the for simple, built in Underscore.js solution.
+
+Let's implement a `render()` function and call it when the view is initialized. The `render()` function will load our template into the view's "el" property using jQuery.
+
+```html
+<script type="text/template" id="list_template">
+  <h2>Books List</h2>
+  <h3>Title: <%= title %></h3>
+  <h4>Author: <%= author %></h4>
+</script>
+
+<div id="list_container"></div>
+
+<script type="text/javascript">
+  var Book = Backbone.Model.extend({
+    defaults: {
+      title: 'Not specified',
+      author: 'Not specified',
+    },
+    initialize: function () {
+      console.log("Take a look, It's in a book, A Reading Rainbow!");
+    },
+  });
+
+  var book1 = new Book({
+    title: 'To Kill a Mockingbird',
+    author: 'Harper Lee',
+  });
+
+  ListView = Backbone.View.extend({
+    initialize: function () {
+      console.log('Reading is Fun!');
+      //this.render();
+    },
+    template: _.template($('#list_template').html()),
+    render: function () {
+      this.$el.html(this.template(this.model.attributes));
+      return this;
+    },
+  });
+
+  var list_view = new ListView({
+    el: $('#list_container'),
+    model: book1,
+  });
+</script>
+```
+
+## Listening for events
+
+To attach a listener to your view, you use the "events" attribute of Backbone.View. Remember that event listeners can only be attached to child elements of the "el" property. Let's attach a "click" listener to a button.
+
+```HTML
+<script type="text/template" id="list_template">
+  <h2>Books List</h2>
+  <h3>Title: <%= title %></h3>
+  <h4>Author: <%= author %></h4>
+  <button>Re-render</button>
+</script>
+
+<div id="list_container">
+    <button>Click the button to render</button>
+</div>
+
+<script type="text/javascript">
+    var Book = Backbone.Model.extend({
+        defaults: {
+            title: 'Not specified',
+            author: 'Not specified'
+        },
+        initialize: function() {
+            console.log("Take a look, It's in a book, A Reading Rainbow!");
+        }
+    });
+
+    var book1 = new Book({
+        title: 'To Kill a Mockingbird',
+        author: 'Harper Lee'
+    });
+
+    ListView = Backbone.View.extend({
+        events: {
+            "click button": "render"
+        },
+        initialize: function() {
+            console.log("Reading is Fun!");
+            //this.render();
+        },
+        template: _.template($("#list_template").html()),
+        render: function() {
+            this.$el.html(this.template(this.model.attributes));
+            return this;
+        }
+    });
+
+    var list_view = new ListView({
+        el: $("#list_container"),
+        model: book1
+    });
+</script>
+```
+
+This article just scratches the surface of what can be done with Backbone.js views. You can listen for events on the model, delegate events and much, much more. For a working example of this view, follow this link to jsFiddle. Next, we will look at <Link to="/blog/digging-into-backbonejs/routers">Routers</Link>.
+
+### Digging into Backbone.js series:
+
+- <Link to="/blog/digging-into-backbonejs/what-is-backbonejs">What is Backbone.js?</Link>
+- <Link to="/blog/digging-into-backbonejs/install">Installing Backbone.js</Link>
+- <Link to="/blog/digging-into-backbonejs/models">Models</Link>
+- <Link to="/blog/digging-into-backbonejs/collections">Collections</Link>
+- Views
+- <Link to="/blog/digging-into-backbonejs/routers">Routers</Link>

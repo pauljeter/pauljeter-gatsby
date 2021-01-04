@@ -1,0 +1,3 @@
+@tailwind base; /* Include base styles & normalize.css as a style reset */
+@tailwind components; /* inject component classes by Tailwind & plugins */
+@tailwind utilities; /* inject utility classes by Tailwind & plugins */
